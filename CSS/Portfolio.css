@@ -65,7 +65,7 @@
 
 
 #div1s{
-    height: 100vh;
+    height: 95vh;
     margin-top:18%;
     background-image: linear-gradient(white,rgb(214, 214, 214));    
 }
@@ -92,7 +92,7 @@ hr{
 
 @media screen and (max-width:600px){
     #div2{
-        height: 150vh;
+        height: 120vh;
     }
 }
 
@@ -105,7 +105,7 @@ hr{
 
 @media screen and (max-width:600px){
     #div3{
-        height: 170vh;
+        height: 150vh;
     }
 }
 
@@ -113,7 +113,7 @@ hr{
 /* DIV4 CSS */
 
 #div4{
-    height: 80vh;
+    height: 100vh;
 }
 
 .prjCard{
@@ -132,7 +132,7 @@ hr{
     }
 
     #div4{
-        height: 225vh;
+        height: 170vh;
     }
 }
 
