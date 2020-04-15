@@ -1,0 +1,144 @@
+/* IMPORTING FONT  */
+
+@font-face {
+    font-family: AvenireNextLTPro;
+    src: url(AvenirNextLTPro-Regular.otf);
+}
+  
+*{
+    font-family: AvenireNextLTPro;
+}
+
+/* NAVBAR CSS */
+
+.nav-item{
+    font-size: 1.2vw;
+    transition: all 0.2s;
+    cursor: pointer;
+    color:rgb(110, 110, 110);
+}
+
+.nav-item:hover{
+    font-weight: bold;
+    color:black;
+ 
+    border-bottom: 3px solid blue;  
+ 
+    margin-bottom: -10px;
+
+    font-size: 1.2em;
+}
+
+@media screen and (max-width:600px){
+    .nav-item{
+        font-size: 6vw;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .nav-item:hover{
+        color:blue;
+        font-weight: bold;
+        border-bottom: none;  
+        font-size: 1.3em;
+        margin-bottom: 0px;
+    }
+}
+
+
+/* DIVISON 1 CSS  */
+
+#div1{
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(white,rgb(214, 214, 214));    
+    margin-top:6%
+}
+
+.responsive {
+    width: 135%;
+    height: 110%;
+    margin-top: -19.5%;
+    margin-left: -10%;
+    
+}
+
+
+#div1s{
+    height: 100vh;
+    margin-top:18%;
+    background-image: linear-gradient(white,rgb(214, 214, 214));    
+}
+
+
+/* DIVISON 2 CSS */
+
+#div2{
+    height: 100vh;
+    overflow: hidden;
+    padding-left:7.8%;
+    padding-right:2%;
+    padding-top:7%;
+    padding-bottom:5%
+}
+
+hr{
+    background-color: rgb(226, 226, 226);
+    padding:7px;
+    border-radius: 10px;
+}
+
+
+
+@media screen and (max-width:600px){
+    #div2{
+        height: 150vh;
+    }
+}
+
+/* DIV3 CSS */
+
+#div3{
+    height: 150vh;
+    margin-top: 50px;
+}
+
+@media screen and (max-width:600px){
+    #div3{
+        height: 170vh;
+    }
+}
+
+
+/* DIV4 CSS */
+
+#div4{
+    height: 80vh;
+}
+
+.prjCard{
+    border-radius:10px;
+    box-shadow: 0px 0px 10px rgb(204, 204, 204);
+}
+
+.cardCont{
+    padding: 15px;
+}
+
+@media screen and (max-width:600px){
+
+    .prjCard{
+        margin-top:10%;
+    }
+
+    #div4{
+        height: 225vh;
+    }
+}
+
+footer{
+    background-color: rgb(211, 211, 211);
+    padding-top:25px;
+    padding-bottom: 5px;
+}
+
