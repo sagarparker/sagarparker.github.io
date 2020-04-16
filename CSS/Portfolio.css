@@ -11,22 +11,24 @@
 
 /* NAVBAR CSS */
 
+
 .nav-item{
-    font-size: 1.2vw;
+    font-size: 1.1em;
     transition: all 0.2s;
     cursor: pointer;
     color:rgb(110, 110, 110);
 }
 
-.nav-item:hover{
+
+
+
+
+.navItemActive{
+    font-size: 1.2em;
     font-weight: bold;
     color:black;
- 
     border-bottom: 3px solid blue;  
- 
     margin-bottom: -10px;
-
-    font-size: 1.2em;
 }
 
 @media screen and (max-width:600px){
@@ -113,7 +115,7 @@ hr{
 /* DIV4 CSS */
 
 #div4{
-    height: 100vh;
+    height: 80vh;
 }
 
 .prjCard{
