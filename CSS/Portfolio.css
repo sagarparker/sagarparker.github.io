@@ -30,13 +30,12 @@
 .certificationslink{
     text-decoration: none!important;
     font-weight: bold;
-    color:black;
     transition: all 0.2s;
     font-size: 1.1rem;
 }
 
 .certificationslink:hover{
-    color:blue;
+    color:blue!important;
 }
 
 @media screen and (max-width:600px){
