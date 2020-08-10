@@ -1,0 +1,48 @@
+.imageHolder{
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageHolder:nth-of-type(1){
+    margin-top: 4vh;
+}
+
+.imageSize{
+    width: 60%;
+    height: 87%;
+}
+
+.imageSize2{
+    width:62%; 
+    height:82%
+}
+
+#Certhead{
+    font-size: 1.5em;
+}
+
+@media screen and (max-width:600px){
+    .imageHolder{
+        height: 40vh;
+    }
+
+    .imageHolder:nth-of-type(1){
+        margin-top: 10vh;
+    }
+
+    .imageSize{
+        width: 99%;
+        height: 90%;
+    }
+
+    .imageSize2{
+        width: 95%;
+        height: 90%;
+    }
+
+  
+}
+
