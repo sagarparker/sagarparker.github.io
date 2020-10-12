@@ -46,7 +46,7 @@ $(window).scroll(function() {
     if(height > vp/1.3 & height < vp*2) {
         $('#ske').addClass("navItemActive"); 
         $('#headerTag').html("Skills & education")
-        $('#headerTag').css({"margin-left":-65})
+        $('#headerTag').css({"margin-left":-45})
     }
     else{
         $('#ske').removeClass("navItemActive");
@@ -55,7 +55,7 @@ $(window).scroll(function() {
     if(height  > vp*2 & height < vp*3+290) {
         $('#crt').addClass("navItemActive"); 
         $('#headerTag').html("Certifications")
-        $('#headerTag').css({"margin-left":-110})
+        $('#headerTag').css({"margin-left":-90})
     }
     else{
         $('#crt').removeClass("navItemActive");
@@ -64,7 +64,7 @@ $(window).scroll(function() {
     if(height  > vp*3+290 & height < vp*4) {
         $('#prj').addClass("navItemActive"); 
         $('#headerTag').html("Projects")
-        $('#headerTag').css({"margin-left":-165})
+        $('#headerTag').css({"margin-left":-145})
     }
     else{
         $('#prj').removeClass("navItemActive");
