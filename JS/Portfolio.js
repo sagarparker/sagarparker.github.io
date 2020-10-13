@@ -38,20 +38,24 @@ function prjFunc(){
 $(window).scroll(function() {
     var height = $(window).scrollTop();
     var vp = $(window).height();
+    var div1_height = $('#div1').height();
+    var div2_height = $('#div2').height();
+    var div3_height = $('#div3').height();
+    var div4_height = $('#div4').height();
 
     if(height > 0 & height < vp*0.9){
         $('#headerTag').html("");
     }
-    if(height > vp*0.9 & height < vp*2.2){
+    if(height > vp*0.9 & height < vp*2.5){
         $('#headerTag').html("Skills & education")
         $('#headerTag').css({"margin-left":-35})
     }
-    if(height > vp*2.2 & height < vp*3.8){
+    if(height > vp*2.5 & height < vp*4.2){
         $('#headerTag').html("Certifications")
         $('#headerTag').css({"margin-left":-80})
     }
 
-    if(height > vp*3.8 & height <vp*6.6){
+    if(height > vp*4.2 & height <vp*8){
         $('#headerTag').html("Projects")
         $('#headerTag').css({"margin-left":-135})
     }
