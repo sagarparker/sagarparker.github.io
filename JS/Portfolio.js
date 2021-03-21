@@ -9,7 +9,7 @@ $(".nav-item").mouseout(function(){
 
 function skeFunc(){
     const id = 'div2';
-    const yOffset = -25; 
+    const yOffset = -50; 
     const element = document.getElementById(id);
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
     
@@ -38,10 +38,6 @@ function prjFunc(){
 $(window).scroll(function() {
     var height = $(window).scrollTop();
     var vp = $(window).height();
-    var div1_height = $('#div1').height();
-    var div2_height = $('#div2').height();
-    var div3_height = $('#div3').height();
-    var div4_height = $('#div4').height();
 
     if(height > 0 & height < vp*0.9){
         $('#headerTag').html("");
