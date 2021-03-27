@@ -9,7 +9,7 @@ $(".nav-item").mouseout(function(){
 
 function skeFunc(){
     const id = 'div2';
-    const yOffset = -50; 
+    const yOffset = -60; 
     const element = document.getElementById(id);
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
     
