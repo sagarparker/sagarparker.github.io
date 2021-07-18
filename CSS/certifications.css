@@ -24,6 +24,12 @@
     font-size: 1.5em;
 }
 
+.ExperienceLetterHolder{
+    width: 50vw; 
+    height: 70vh;
+    padding: 10px;
+}
+
 @media screen and (max-width:600px){
     .imageHolder{
         height: 40vh;
@@ -41,6 +47,12 @@
     .imageSize2{
         width: 95%;
         height: 90%;
+    }
+
+    .ExperienceLetterHolder{
+        width: 88vw; 
+        height: 70vh;
+        padding: 10px;
     }
 
   
