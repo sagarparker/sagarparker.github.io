@@ -43,7 +43,7 @@ $(window).scroll(function() {
         $('#headerTag').html("");
     }
     if(height > vp*0.9 & height < vp*2.5){
-        $('#headerTag').html("Skills & education")
+        $('#headerTag').html("Skills & experience")
         $('#headerTag').css({"margin-left":-35})
     }
     if(height > vp*2.5 & height < vp*4.2){
