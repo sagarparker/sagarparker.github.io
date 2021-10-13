@@ -44,7 +44,7 @@ $(window).scroll(function() {
     }
     if(height > vp*0.9 & height < vp*2.5){
         $('#headerTag').html("Skills & experience")
-        $('#headerTag').css({"margin-left":0})
+        $('#headerTag').css({"margin-left":-20})
     }
     if(height > vp*2.5 & height < vp*4.2){
         $('#headerTag').html("Certifications")
