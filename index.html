@@ -38,32 +38,30 @@
 
   <!-- NAVBAR -->
     
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white" >
-        <a class="navbar-brand" >
-            <img src="./Images/logo.png" height="49vw" width="49vw"  alt="">
-        </a>
-        <h4 style="font-weight:bold;margin-top: 10px" class="d-block d-md-none " id="headerTag"></h4>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item mt-3 mt-md-0 ml-md-5 ">
-              <a id="ske" onclick="skeFunc()">Skills & Experience</a>
-            </li>
-            <li class="nav-item mt-3 mt-md-0 ml-md-5">
-              <a id="crt" onclick="crtFunc()">Certifications</a>
-            </li>
-            <li class="nav-item mt-3 mt-md-0 ml-md-5">
-              <a id="prj" onclick="prjFunc()">Projects</a>
-            </li>
-            <li class="d-block d-md-none">
-              <hr style="width: 100vw;padding: 1px!important;margin-left: -5vw;margin-top: 5vh;margin-bottom: -1vh;">
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white" >
+      <a class="navbar-brand" >
+          <img src="./Images/logo.png" height="49vw" width="49vw"  alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a id="ske" onclick="skeFunc()">Skills & Experience</a>
+          </li>
+          <li class="nav-item ">
+            <a id="crt" onclick="crtFunc()">Certifications</a>
+          </li>
+          <li class="nav-item ">
+            <a id="prj" onclick="prjFunc()">Projects</a>
+          </li>
+          <li class="d-block d-md-none">
+            <hr style="width: 100vw;padding: 1px!important;margin-left: -5vw;margin-top: 5vh;margin-bottom: -1vh;">
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     
 
@@ -73,23 +71,22 @@
         <div class="conainer">
             <div class="row">
                 
-                <div class="col-6" style="padding-left: 7.5%;" >
-                    
-                        <p style="font-size: 3.2vw;font-weight: bold;margin-top: 17%;">Hello,I'm Sagar Parker,</br>
+                <div class="col-6 main-div" style="padding-left: 7.5%;" >              
+                        <p style="font-size: 3.2vw;font-weight: bold;">Hello,I'm Sagar Parker,</br>
                            aka <a style="color: #017CFF;" target="_blank" href="https://etherscan.io/nft/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/26304260890194668086448018549224152377627853406219754709862833022378186015454">infy8.eth</a>.</p>
                         <p style="font-size: 2vw;margin-top:-10px"><span style="color: #017CFF;font-weight:550">Software Engineer</span> and an advocate of a decentralized internet.</p>
-                        <a href="https://www.linkedin.com/in/sagar-parker-07561b1a3/" style="text-decoration: none;" target="_blank" >
-                            <img src="./Images/linkedin-brands.svg" class="mt-3 socialLinks" height="6%" width="6%" alt="">
-                        </a>
+                        <div class="socialLinksRow">
+                          <a href="https://www.linkedin.com/in/sagar-parker-07561b1a3/" style="text-decoration: none;" target="_blank" >
+                            <img src="./Images/linkedin-brands.svg" alt="">
+                          </a>
+                          <a href="https://github.com/sagarparker" target="_blank" style="text-decoration: none;">
+                            <img src="./Images/github-brands.svg" alt="">
+                          </a>
+                          <a href="https://www.hackerrank.com/sagar8parker" target="_blank" style="text-decoration: none;">
+                            <img src="./Images/hackerrank.svg" alt="">
+                          </a>
+                        </div>
 
-                        <a href="https://github.com/sagarparker" target="_blank" style="text-decoration: none;">
-                          <img src="./Images/github-brands.svg" class="mt-3 ml-3 socialLinks" height="6%" width="6%" alt="">
-                        </a>
-
-                        <a href="https://www.hackerrank.com/sagar8parker" target="_blank" style="text-decoration: none;">
-                          <img src="./Images/hackerrank.svg" class="mt-3 ml-3 socialLinks" height="6%" width="6%" alt="">
-                        </a>
-                        
                 </div>
                 <div class="col-5">
                     <img src="./Images/mainDiv.svg" class="responsive"  alt="failed to load image">
@@ -226,7 +223,7 @@
             <div class="prjCard">
               <img src="./Images/Cover.png" width="100%" height="190px" style="border-top-left-radius: 10px;border-top-right-radius: 10px;" alt="">
               <div class="cardCont">
-                <h4 class="mt-2" style="font-weight: bold;color:#017CFF"> Collective </h4>
+                <h4 class="mt-2" style="font-weight: bold;color:#017CFF">Collective</h4>
                 <h5 style="font-weight: 600;">Flutter, Node.js, Ethereum</h5>
                 <p class="mt-3 mb-3">An equity crowdfunding app managed with smart contracts that allows users to invest in projects with crypto.</p>
                 <a href="https://github.com/sagarparker/Collective" style="color: #017CFF;text-decoration:none;font-size:1.2em" ><img src="./Images/github-brands.svg" style="margin-bottom: 6px;margin-right: 3px;" width="25vw" height="25vh" alt=""> View github repository</a>
@@ -238,7 +235,7 @@
             <div class="prjCard">
               <img src="./Images/voting.jpg" width="100%" height="190px" style="border-top-left-radius: 10px;border-top-right-radius: 10px;" alt="">
               <div class="cardCont">
-                <h4 class="mt-2" style="font-weight: bold;color:#017CFF"> VoterChain.com </h4>
+                <h4 class="mt-2" style="font-weight: bold;color:#017CFF">VoterChain</h4>
                 <h5 style="font-weight: 600;">React, Blockchain</h5>
                 <p class="mt-3 mb-3">A decentralized voting system created by implementing core blockchain concepts, React and Node.js.</p>
                 <a href="https://github.com/sagarparker/VoterChain" style="color: #017CFF;text-decoration:none;font-size:1.2em" ><img src="./Images/github-brands.svg" style="margin-bottom: 6px;margin-right: 3px;" width="25vw" height="25vh" alt=""> View github repository</a>
