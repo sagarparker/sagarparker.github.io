@@ -15,8 +15,13 @@
 .nav-item{
     transition: all 0.2s;
     cursor: pointer;
-    font-size: 1.2rem;
-    margin-left: 60px;
+    font-size: 1vw;
+    margin-left: 3vw;
+}
+
+.nav-image{
+    height: 3%;
+    width: 3%;
 }
 
 
@@ -38,10 +43,22 @@
 
 
 @media screen and (max-width:600px){
+
+    .nav-image{
+        height: 12%;
+        width: 12%;
+    }
+
     .nav-item{
         font-size: 6vw;
         transition: all 0.3s;
         cursor: pointer;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .nav-item:nth-last-child(1){
+        padding-bottom: 15px;
     }
 
     .nav-item:hover{
@@ -50,6 +67,10 @@
         border-bottom: none;  
         font-size: 1.3em;
         margin-bottom: 0px;
+    }
+
+    .navbar{
+        border-bottom: 1px solid gainsboro;
     }
 }
 
@@ -167,7 +188,6 @@ hr{
 
     .prjCard{
         margin-top:10%;
-        height: 90vh;
     }
 
     #div4{
