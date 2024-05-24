@@ -1,4 +1,15 @@
-let height = $('.navbar').height();
+let height = $('.navbar').height() + 20;
+
+
+$('.navbar-toggler').on("click",function() {
+    let navbar_height =  $('.navbar-toggler').attr('aria-expanded');
+    if (navbar_height === "false") {
+        $('.navbar').addClass("navbar-expanded");
+    }
+    else{
+        $('.navbar').removeClass("navbar-expanded");
+    }
+});
 
 $(".nav-item").mouseover(function(){
     $(this).addClass('navItemActive');
@@ -7,15 +18,9 @@ $(".nav-item").mouseout(function(){
     $(this).removeClass('navItemActive');
 });
 
-$('#ske').click(function(){
-    $('html, body').animate({
-        scrollTop: $('#div2').offset().top - height
-    }, 500);
-});
-
 $('#crt').click(function(){
     $('html, body').animate({
-        scrollTop: $('#div3').offset().top -height
+        scrollTop: $('#div3').offset().top - height
     }, 500);
 });
 

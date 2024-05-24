@@ -40,19 +40,19 @@
     color:#017CFF;
 }
 
-.section-heading{
-    background: white;
-    border-radius: 5px;
-    box-shadow: 9.91px 9.91px 15px #D9DADE, -8px -8px 8px #FFFFFF;
-    width: 200px;
-    height: 50px;
+.section-header{
+    background-color: rgb(240, 240, 240);
+    height: 8vh;
+    font-size: 1.8em;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh;
-    margin-bottom: 5vh;
-    font-weight: bold;
-    font-size: 1vw;
+    margin-bottom: 4vh;
+}
+
+.navbar-expanded {
+    border-bottom: 1px solid rgb(208, 208, 208);
 }
 
 
@@ -82,10 +82,6 @@
     .navItemActive{
         font-weight: bold;
         color:black;
-    }
-
-    .navbar{
-        border-bottom: 1px solid gainsboro;
     }
 
     .section-heading{
@@ -134,36 +130,11 @@
 }
 
 
-/* DIVISON 2 CSS */
-
-#div2{
-    height: 100vh;
-    overflow: hidden;
-    padding-left:7%;
-    padding-right:2%;
-    padding-top:7%;
-    padding-bottom:5%
-}
-
-hr{
-    background-color: rgb(226, 226, 226);
-    padding:7px;
-    border-radius: 10px;
-}
-
-
-
-@media screen and (max-width:600px){
-    #div2{
-        height: 140vh;
-    }
-}
 
 /* DIV3 CSS */
 
 #div3{
     height: auto;
-    padding-top: 8vh;
     padding-bottom: 8vh;
 }
 
@@ -192,16 +163,17 @@ hr{
 
 #div4{
     height: 100vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    padding-top: 0px;
     padding-bottom: 0px;
 }
 
+.prjCardHolder{
+    margin-top: 20vh;
+}
+
 .prjCard{
-    border-radius:10px;
-    box-shadow: 0px 0px 10px rgb(184, 184, 184);
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #ebebeb;
     height: auto;
 }
 
@@ -221,10 +193,14 @@ hr{
        padding-top: 20px;
        padding-bottom: 50px;
     }
+
+    .prjCardHolder{
+        margin-top: 0vh;
+    }
 }
 
 footer{
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(240, 240, 240);
     padding-top:25px;
     padding-bottom: 5px;
 }
