@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-content">
-        <a href="/portfolio" className="navbar-logo">
+        <a href="/" className="navbar-logo">
           <img src={logo} alt="logo" width={35} height={35}/>
         </a>
         <div className="navbar-links">
