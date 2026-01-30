@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e3476e6a.css",
+    "main.js": "/static/js/main.7ae5832d.js",
+    "static/js/453.a7d99afe.chunk.js": "/static/js/453.a7d99afe.chunk.js",
+    "static/media/trusttag.png": "/static/media/trusttag.d3006e89b0ddcfddbe4a.png",
+    "static/media/java.jpg": "/static/media/java.3826ec8c6920c5011d5e.jpg",
+    "static/media/krishi.png": "/static/media/krishi.dab0c689631020f3ff6f.png",
+    "static/media/collective.png": "/static/media/collective.7ae7edbae1798f457aa1.png",
+    "static/media/AvenirNextLTPro-Regular.otf": "/static/media/AvenirNextLTPro-Regular.94f2f163d4b698242fef.otf",
+    "static/media/logo.png": "/static/media/logo.5d231f4cea8ba733eea0.png",
+    "index.html": "/index.html",
+    "main.e3476e6a.css.map": "/static/css/main.e3476e6a.css.map",
+    "main.7ae5832d.js.map": "/static/js/main.7ae5832d.js.map",
+    "453.a7d99afe.chunk.js.map": "/static/js/453.a7d99afe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3476e6a.css",
+    "static/js/main.7ae5832d.js"
+  ]
+}
