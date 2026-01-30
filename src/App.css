@@ -246,7 +246,6 @@ section {
 
 /* Skills Section */
 .skills {
-  background: #0d0d0d;
 }
 
 .skills-grid {
@@ -412,7 +411,6 @@ section {
 
 /* Projects Section */
 .projects {
-  background: #0d0d0d;
 }
 
 .project-category {
@@ -760,5 +758,13 @@ footer {
   .project-card {
     max-width: 500px;
     margin: 0 auto;
+  }
+
+  .skills {
+    background: #0d0d0d;
+  }
+
+  .projects {
+    background: #0d0d0d;
   }
 }
