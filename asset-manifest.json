@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.097946a4.css",
-    "main.js": "/static/js/main.111aad8e.js",
+    "main.css": "/static/css/main.4ba8d49b.css",
+    "main.js": "/static/js/main.256e35da.js",
     "static/js/453.a7d99afe.chunk.js": "/static/js/453.a7d99afe.chunk.js",
     "static/media/trusttag.png": "/static/media/trusttag.d3006e89b0ddcfddbe4a.png",
     "static/media/java.jpg": "/static/media/java.3826ec8c6920c5011d5e.jpg",
     "static/media/krishi.png": "/static/media/krishi.dab0c689631020f3ff6f.png",
     "static/media/collective.png": "/static/media/collective.7ae7edbae1798f457aa1.png",
-    "static/media/AvenirNextLTPro-Regular.otf": "/static/media/AvenirNextLTPro-Regular.94f2f163d4b698242fef.otf",
     "static/media/logo.png": "/static/media/logo.5d231f4cea8ba733eea0.png",
     "index.html": "/index.html",
-    "main.097946a4.css.map": "/static/css/main.097946a4.css.map",
-    "main.111aad8e.js.map": "/static/js/main.111aad8e.js.map",
+    "main.4ba8d49b.css.map": "/static/css/main.4ba8d49b.css.map",
+    "main.256e35da.js.map": "/static/js/main.256e35da.js.map",
     "453.a7d99afe.chunk.js.map": "/static/js/453.a7d99afe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.097946a4.css",
-    "static/js/main.111aad8e.js"
+    "static/css/main.4ba8d49b.css",
+    "static/js/main.256e35da.js"
   ]
 }
