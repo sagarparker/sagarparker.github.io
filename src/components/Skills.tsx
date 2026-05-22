@@ -72,11 +72,14 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="skills">
-      <h2 className="section-title">Skills</h2>
+    <section id="skills" className="reveal">
+      <div className="section-header">
+        <h2 className="section-title">Skills</h2>
+        <div className="section-line"></div>
+      </div>
       <div className="skills-grid">
         {skillCategories.map((category, index) => (
-          <div key={index} className="skill-category">
+          <div key={index} className="skill-category reveal-child">
             <h3>
               {category.icon}
               {category.title}

@@ -43,11 +43,14 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="experience">
-      <h2 className="section-title">Experience</h2>
+    <section id="experience" className="reveal">
+      <div className="section-header">
+        <h2 className="section-title">Experience</h2>
+        <div className="section-line"></div>
+      </div>
       <div className="timeline">
         {experiences.map((exp, index) => (
-          <div key={index} className="timeline-item">
+          <div key={index} className="timeline-item reveal-child">
             <div className="timeline-dot"></div>
             <div className="timeline-content">
               <span className="timeline-date">{exp.date}</span>

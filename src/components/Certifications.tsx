@@ -42,16 +42,18 @@ const Certifications: React.FC = () => {
   ];
 
   return (
-    <section id="certifications" className="certifications">
-      <h2 className="section-title">Certifications</h2>
-      
+    <section id="certifications" className="reveal">
+      <div className="section-header">
+        <h2 className="section-title">Certifications</h2>
+        <div className="section-line"></div>
+      </div>
       <div className="cert-container">
         <div className="cert-list">
           {certifications.map((cert, index) => (
             <a 
               key={index} 
               href={cert.link} 
-              className="cert-item"
+              className="cert-item reveal-child"
               target="_blank"
               rel="noopener noreferrer"
             >
