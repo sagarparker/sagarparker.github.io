@@ -1,18 +1,42 @@
 # Sagar Parker's Portfolio
 
-Welcome to your personal portfolio codebase! This project is built using React and TypeScript, designed to be clean, modern, and easily deployable.
+The source code for my personal portfolio website, built with **React**, **TypeScript**, and **CSS**.
 
-## 🚀 Quick Commands
+Live Demo: **[https://sagarparker.github.io](https://sagarparker.github.io)**
 
-Here are the only commands you need to develop and deploy your website:
+## ✨ Features
 
-### `npm start`
-Runs your app in development mode. 
-Open **[http://localhost:3000](http://localhost:3000)** (or the port shown in your terminal) to view it in your browser. The page will automatically reload as you make changes.
+- **Modern Aesthetic**: Premium dark mode design with a clean, high-craft interface.
+- **Fully Responsive**: Optimized for seamless viewing across mobile, tablet, and desktop devices.
+- **Performance Optimized**: Light-weight, semantic HTML structure, and optimized asset delivery.
 
-### `npm run build`
-Compiles your project into highly optimized static assets inside the `build/` folder, ready for production.
+## 🛠️ Built With
 
-### `npm run deploy`
-Builds and deploys your website to GitHub Pages in one step.
-This automatically runs your build script and pushes the compiled assets to the `gh-pages` branch. Your portfolio will be live at: **[https://sagarparker.github.io](https://sagarparker.github.io)**
+- **React 19**
+- **TypeScript**
+- **Vanilla CSS**
+- **GitHub Pages** (via `gh-pages` for automated deployments)
+
+## 💻 Local Development
+
+If you want to run this project locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sagarparker/sagarparker.github.io.git
+   ```
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+## 🚀 Deployment
+
+To compile and deploy the project to GitHub Pages in one step:
+```bash
+npm run deploy
+```
