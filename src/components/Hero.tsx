@@ -9,10 +9,13 @@ const Hero: React.FC = () => {
     <section className="hero">
       <div className="hero-content">
         <p className="hero-greeting">Hello, I'm</p>
-        <h1 className="hero-name">Sagar Parker.</h1>
+        <h1 className="hero-name">
+          Sagar Parker<span className="hero-dot">.</span>
+        </h1>
         <p className="hero-title">
-          <span className="highlight">Software Engineer</span> and an advocate of a{' '}
-          decentralized internet.
+          Experienced software engineer with a keen interest in{' '}
+          <span className="highlight-pill">distributed systems</span>, aiming to build{' '}
+          infrastructure for <span className="highlight-pill">modern AI systems</span>.
         </p>
         
         <div className="social-links">
@@ -53,9 +56,9 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="scroll-indicator" onClick={scrollToSkills}>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 5v14M5 12l7 7 7-7"/>
-        </svg>
+        <div className="mouse">
+          <div className="wheel"></div>
+        </div>
       </div>
     </section>
   );

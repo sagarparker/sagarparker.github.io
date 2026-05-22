@@ -1,27 +1,27 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import logo from '../assets/images/logo.png';
 
+const SECTIONS = ['skills', 'experience', 'projects', 'certifications'];
+
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>('');
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
-
-  const sections = ['skills', 'experience', 'projects', 'certifications'];
 
   const handleScroll = useCallback((): void => {
     setScrolled(window.scrollY > 50);
 
     // Determine active section
     const scrollPosition = window.scrollY + window.innerHeight / 3;
-    for (let i = sections.length - 1; i >= 0; i--) {
-      const el = document.getElementById(sections[i]);
+    for (let i = SECTIONS.length - 1; i >= 0; i--) {
+      const el = document.getElementById(SECTIONS[i]);
       if (el && el.offsetTop <= scrollPosition) {
-        setActiveSection(sections[i]);
+        setActiveSection(SECTIONS[i]);
         return;
       }
     }
     setActiveSection('');
-  }, [sections]);
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -29,8 +29,16 @@ const Navbar: React.FC = () => {
   }, [handleScroll]);
 
   const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
-    // Close mobile menu on link click
+    e.preventDefault();
     setMobileOpen(false);
+    
+    // Smooth scroll with a slight delay to allow layout to settle
+    setTimeout(() => {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 150);
   };
 
   const toggleMobile = () => {
@@ -64,7 +72,7 @@ const Navbar: React.FC = () => {
         </a>
 
         <div className={`navbar-links ${mobileOpen ? 'mobile-open' : ''}`}>
-          {sections.map((section) => (
+          {SECTIONS.map((section) => (
             <a
               key={section}
               href={`#${section}`}
