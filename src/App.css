@@ -358,7 +358,7 @@ a {
 /* Scroll indicator — premium mouse scrolling wheel */
 .scroll-indicator {
   position: absolute;
-  bottom: 3.5rem;
+  bottom: 8.5rem; /* shifted up from 6rem to sit cleanly above bottom viewport edge */
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
@@ -946,7 +946,7 @@ footer {
     background: rgba(0, 0, 0, 0.75) !important;
     backdrop-filter: blur(16px) !important;
     -webkit-backdrop-filter: blur(16px) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-bottom: none !important;
   }
 
   .navbar-content {
@@ -1062,13 +1062,13 @@ footer {
 
   .scroll-indicator {
     display: flex !important;
-    bottom: 2rem !important;
+    bottom: 7.5rem !important; /* shifted up from 4.5rem to sit cleanly above bottom viewport edge */
   }
 
   .hero {
     position: relative;
     min-height: 100vh;
-    padding: 12.5rem 1.25rem 2rem; /* shifted vertically down into the dark sky area under the navbar */
+    padding: 5rem 1.25rem 2rem; /* shifted as top as possible immediately below the navbar */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* vertically top-aligned instead of centered to prevent overlapping the skyline towers at the bottom */
@@ -1184,7 +1184,7 @@ footer {
 
 @media (max-width: 480px) {
   .hero {
-    padding: 10.5rem 1rem 2rem; /* shifted vertically up into the spacious dark sky area */
+    padding: 4.5rem 1rem 2rem; /* shifted as top as possible immediately below the navbar */
   }
 
 
