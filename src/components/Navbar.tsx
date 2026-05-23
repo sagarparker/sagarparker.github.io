@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import logo from '../assets/images/logo.png';
 
 const SECTIONS = ['skills', 'experience', 'projects', 'certifications'];
 
@@ -67,9 +66,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-content">
-        <a href="/" className="navbar-logo">
-          <img src={logo} alt="logo" width={35} height={35}/>
-        </a>
+
 
         <div className={`navbar-links ${mobileOpen ? 'mobile-open' : ''}`}>
           {SECTIONS.map((section) => (
