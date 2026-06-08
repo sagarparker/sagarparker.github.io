@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-const SECTIONS = ['skills', 'experience', 'projects', 'blogs', 'certifications'];
+const SECTIONS = ['experience', 'blogs', 'projects', 'certifications'];
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
               className={activeSection === section ? 'active' : ''}
               onClick={(e) => handleNavClick(e, section)}
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              {section === 'experience' ? 'Experience & Skills' : section.charAt(0).toUpperCase() + section.slice(1)}
             </a>
           ))}
         </div>

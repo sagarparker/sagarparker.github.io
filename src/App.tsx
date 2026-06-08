@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Blogs from './components/Blogs';
@@ -30,10 +29,9 @@ const App: React.FC = () => {
     <div className="App">
       <Navbar />
       <Hero />
-      <Skills />
       <Experience />
-      <Projects />
       <Blogs />
+      <Projects />
       <Certifications />
       <Footer />
     </div>

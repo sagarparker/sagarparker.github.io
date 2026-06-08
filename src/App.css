@@ -515,80 +515,46 @@ section {
 }
 
 /* ============================================
-   SKILLS
+   EXPERIENCE & SKILLS
    ============================================ */
 
-.skills-grid {
+.experience-skills-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--border);
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.skill-category {
-  background: var(--card);
-  padding: 1.75rem;
-  transition: background var(--transition);
+.experience-column,
+.skills-column {
+  width: 100%;
 }
 
-.skill-category:hover {
-  background: var(--card-hover);
-}
-
-.skill-category h3 {
+.column-title {
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--text);
-  margin-bottom: 1rem;
-  font-size: 0.88rem;
-  font-weight: 600;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  letter-spacing: -0.01em;
+  gap: 0.65rem;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.85rem;
 }
 
-.skill-category h3 svg {
-  width: 18px;
-  height: 18px;
+.column-icon {
+  width: 20px;
+  height: 20px;
   color: var(--accent);
   flex-shrink: 0;
 }
 
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.skill-tag {
-  color: var(--text-secondary);
-  padding: 0.3rem 0.7rem;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  background: var(--accent-subtle);
-  transition: all var(--transition);
-}
-
-.skill-tag:hover {
-  background: var(--accent-muted);
-  color: var(--text);
-}
-
-/* ============================================
-   EXPERIENCE
-   ============================================ */
-
-.experience {
-  background: transparent;
-}
-
+/* Timeline */
 .timeline {
   position: relative;
-  max-width: 720px;
-  margin: 0 auto;
   padding-left: 2rem;
 }
 
@@ -688,6 +654,66 @@ section {
   height: 4px;
   border-radius: 50%;
   background: var(--text-dim);
+}
+
+/* Skills sidebar */
+.skills-vertical-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.skill-category {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-category:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.45);
+}
+
+.skill-category h4 {
+  color: var(--text);
+  margin-bottom: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.skill-category h4 svg {
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-tag {
+  color: var(--text-secondary);
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--accent-subtle);
+  transition: all var(--transition);
+}
+
+.skill-tag:hover {
+  background: var(--accent-muted);
+  color: var(--text);
 }
 
 /* ============================================
@@ -1080,12 +1106,13 @@ footer {
    RESPONSIVE
    ============================================ */
 
-@media (max-width: 900px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1024px) {
+  .experience-skills-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
-  .skills-grid {
+  .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1317,8 +1344,8 @@ footer {
     fill: currentColor;
   }
 
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .skills-vertical-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .timeline {
@@ -1400,5 +1427,9 @@ footer {
     font-size: 0.82rem;
     padding: 0.42rem 0.85rem;
     border-radius: 18px;
+  }
+
+  .skills-vertical-grid {
+    grid-template-columns: 1fr;
   }
 }
