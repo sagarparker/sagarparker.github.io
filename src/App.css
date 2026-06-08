@@ -156,20 +156,13 @@ a {
   right: 0;
   z-index: 1000;
   padding: 1.25rem 1.5rem;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(12px) saturate(1.8);
-  -webkit-backdrop-filter: blur(12px) saturate(1.8);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  background: transparent;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar-scrolled {
   padding: 0.85rem 1.5rem;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(20px) saturate(1.8);
-  -webkit-backdrop-filter: blur(20px) saturate(1.8);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  background: transparent;
 }
 
 .navbar-content {
@@ -200,10 +193,13 @@ a {
   margin-left: auto;
   /* push links to the right side of the flex container */
   gap: 0.25rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(10, 10, 10, 0.5);
+  backdrop-filter: blur(16px) saturate(1.8);
+  -webkit-backdrop-filter: blur(16px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   padding: 0.3rem;
-  border-radius: 10px;
-  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
 .navbar-links a {
@@ -1087,10 +1083,10 @@ footer {
 @media (max-width: 768px) {
   .navbar {
     padding: 0.75rem 1.25rem !important;
-    background: rgba(0, 0, 0, 0.65) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: none !important;
   }
 
   .navbar-content {
