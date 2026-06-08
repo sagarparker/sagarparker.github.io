@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-const SECTIONS = ['skills', 'experience', 'projects', 'certifications'];
+const SECTIONS = ['skills', 'experience', 'projects', 'blogs', 'certifications'];
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);

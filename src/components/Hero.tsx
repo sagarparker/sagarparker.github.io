@@ -13,9 +13,9 @@ const Hero: React.FC = () => {
           Sagar Parker<span className="hero-dot">.</span>
         </h1>
         <p className="hero-title">
-          Experienced software engineer with a keen interest in{' '}
-          <span className="highlight-pill">distributed systems</span>, aiming to build{' '}
-          infrastructure for <span className="highlight-pill">modern AI systems</span>.
+          Experienced software engineer with a strong interest in{' '}
+          <span className="highlight-pill">distributed systems</span> and a passion for building the
+          infrastructure that powers <span className="highlight-pill">modern AI applications</span>.
         </p>
         
         <div className="social-links">

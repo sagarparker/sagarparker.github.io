@@ -49,7 +49,9 @@
    RESET & BASE
    ============================================ */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -91,7 +93,7 @@ a {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reveal.revealed {
@@ -103,7 +105,7 @@ a {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reveal.revealed .reveal-child {
@@ -111,14 +113,37 @@ a {
   transform: translateY(0);
 }
 
-.reveal.revealed .reveal-child:nth-child(1) { transition-delay: 0.04s; }
-.reveal.revealed .reveal-child:nth-child(2) { transition-delay: 0.08s; }
-.reveal.revealed .reveal-child:nth-child(3) { transition-delay: 0.12s; }
-.reveal.revealed .reveal-child:nth-child(4) { transition-delay: 0.16s; }
-.reveal.revealed .reveal-child:nth-child(5) { transition-delay: 0.2s; }
-.reveal.revealed .reveal-child:nth-child(6) { transition-delay: 0.24s; }
-.reveal.revealed .reveal-child:nth-child(7) { transition-delay: 0.28s; }
-.reveal.revealed .reveal-child:nth-child(8) { transition-delay: 0.32s; }
+.reveal.revealed .reveal-child:nth-child(1) {
+  transition-delay: 0.04s;
+}
+
+.reveal.revealed .reveal-child:nth-child(2) {
+  transition-delay: 0.08s;
+}
+
+.reveal.revealed .reveal-child:nth-child(3) {
+  transition-delay: 0.12s;
+}
+
+.reveal.revealed .reveal-child:nth-child(4) {
+  transition-delay: 0.16s;
+}
+
+.reveal.revealed .reveal-child:nth-child(5) {
+  transition-delay: 0.2s;
+}
+
+.reveal.revealed .reveal-child:nth-child(6) {
+  transition-delay: 0.24s;
+}
+
+.reveal.revealed .reveal-child:nth-child(7) {
+  transition-delay: 0.28s;
+}
+
+.reveal.revealed .reveal-child:nth-child(8) {
+  transition-delay: 0.32s;
+}
 
 /* ============================================
    NAVBAR
@@ -143,7 +168,8 @@ a {
 
 .navbar-content {
   max-width: 100%;
-  padding: 0 2rem; /* elegant horizontal breathing room to align with edge-to-edge screen designs */
+  padding: 0 2rem;
+  /* elegant horizontal breathing room to align with edge-to-edge screen designs */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -165,7 +191,8 @@ a {
 
 .navbar-links {
   display: flex;
-  margin-left: auto; /* push links to the right side of the flex container */
+  margin-left: auto;
+  /* push links to the right side of the flex container */
   gap: 0.25rem;
   background: rgba(255, 255, 255, 0.04);
   padding: 0.3rem;
@@ -227,10 +254,13 @@ a {
   margin: 0 !important;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* vertically top */
-  align-items: flex-start; /* horizontally left align the content */
+  justify-content: flex-start;
+  /* vertically top */
+  align-items: flex-start;
+  /* horizontally left align the content */
   position: relative;
-  padding: 8.5rem 4.5rem 2rem; /* shifted to left to float beautifully in the spacious dark sky area */
+  padding: 8.5rem 4.5rem 2rem;
+  /* shifted to left to float beautifully in the spacious dark sky area */
   overflow: hidden;
   background-color: #000000;
 }
@@ -243,23 +273,28 @@ a {
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  transform: scaleX(-1); /* mirror horizontally right-to-left */
+  transform: scaleX(-1);
+  /* mirror horizontally right-to-left */
   pointer-events: none;
   z-index: 0;
 }
 
 .hero-content {
-  text-align: left; /* clean readable left-aligned text */
+  text-align: left;
+  /* clean readable left-aligned text */
   z-index: 2;
-  max-width: var(--max-width); /* constrained to same width as navbar content to align with logo */
+  max-width: var(--max-width);
+  /* constrained to same width as navbar content to align with logo */
   width: 100%;
 }
 
 /* Premium staggered enter animations */
 .hero-greeting {
   font-size: 0.85rem;
-  color: var(--text-secondary); /* removed blue, using sleek gray */
-  margin-bottom: 0.1rem; /* ultra-compact vertically */
+  color: var(--text-secondary);
+  /* removed blue, using sleek gray */
+  margin-bottom: 0.1rem;
+  /* ultra-compact vertically */
   letter-spacing: 4px;
   text-transform: uppercase;
   font-weight: 600;
@@ -269,29 +304,34 @@ a {
 }
 
 .hero-name {
-  font-size: clamp(3.2rem, 8vw, 6rem);
+  font-size: clamp(3.0rem, 7.2vw, 5.2rem);
+  /* scaled down further for a more balanced layout */
   font-weight: 900;
   color: var(--text);
-  margin-bottom: 0.35rem; /* ultra-compact vertically */
+  margin-bottom: 0.35rem;
+  /* ultra-compact vertically */
   line-height: 1.15;
   padding-bottom: 0.1em;
   letter-spacing: -0.04em;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-  -webkit-text-stroke: 1.2px currentColor; /* simulate absolute maximum bold weight */
+  -webkit-text-stroke: 1.8px currentColor;
+  /* increased stroke for heavier simulated weight */
   opacity: 0;
   animation: heroFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-delay: 0.2s;
 }
 
 .hero-dot {
-  color: #ffffff; /* removed blue, made clean solid white */
-  text-shadow: none; /* removed blue glow shadow */
+  color: #ffffff;
+  /* removed blue, made clean solid white */
+  text-shadow: none;
+  /* removed blue glow shadow */
 }
-
 .hero-title {
   font-size: clamp(1.15rem, 2.8vw, 1.45rem);
   color: var(--text-secondary);
-  margin: 0 0 0.85rem 0; /* ultra-compact vertically left-aligned margin */
+  margin: 0 0 0.85rem 0;
+  /* ultra-compact vertically left-aligned margin */
   font-weight: 400;
   line-height: 1.75;
   max-width: 620px;
@@ -310,7 +350,8 @@ a {
 /* Social links — ultra-premium minimal pills */
 .social-links {
   display: flex;
-  justify-content: flex-start; /* left align interactive links */
+  justify-content: flex-start;
+  /* left align interactive links */
   gap: 0.85rem;
   flex-wrap: wrap;
   opacity: 0;
@@ -322,7 +363,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text-secondary); /* Elegant light grey, perfect middle ground */
+  color: var(--text-secondary);
+  /* Elegant light grey, perfect middle ground */
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 500;
@@ -346,7 +388,8 @@ a {
 .social-link svg {
   width: 15px;
   height: 15px;
-  opacity: 0.72; /* Balanced middle-ground icon visibility */
+  opacity: 0.72;
+  /* Balanced middle-ground icon visibility */
   transition: opacity var(--transition), transform var(--transition);
 }
 
@@ -358,7 +401,8 @@ a {
 /* Scroll indicator — premium mouse scrolling wheel */
 .scroll-indicator {
   position: absolute;
-  bottom: 8.5rem; /* shifted up from 6rem to sit cleanly above bottom viewport edge */
+  bottom: 8.5rem;
+  /* shifted up from 6rem to sit cleanly above bottom viewport edge */
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
@@ -407,11 +451,13 @@ a {
     opacity: 1;
     height: 6px;
   }
+
   30% {
     top: 6px;
     opacity: 1;
     height: 10px;
   }
+
   100% {
     top: 20px;
     opacity: 0;
@@ -424,6 +470,7 @@ a {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -791,6 +838,109 @@ section {
 }
 
 /* ============================================
+   BLOGS
+   ============================================ */
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.blog-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--card);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.blog-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px -8px rgba(0, 0, 0, 0.5);
+}
+
+.blog-card-inner {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.blog-platform {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-hover);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: var(--accent-subtle);
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+}
+
+.blog-arrow {
+  width: 16px;
+  height: 16px;
+  color: var(--text-dim);
+  transition: all var(--transition);
+}
+
+.blog-card:hover .blog-arrow {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+.blog-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.blog-description {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1.15rem;
+  flex: 1;
+}
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: auto;
+}
+
+.blog-tag {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  padding: 0.2rem 0.55rem;
+  border-radius: 5px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+}
+
+.blog-card:hover .blog-tag {
+  border-color: var(--border-hover);
+}
+
+/* ============================================
    CERTIFICATIONS
    ============================================ */
 
@@ -1017,7 +1167,8 @@ footer {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin-left: auto !important; /* pushes the menu button to the far right side of the screen */
+    margin-left: auto !important;
+    /* pushes the menu button to the far right side of the screen */
     background: rgba(255, 255, 255, 0.04) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     color: #ffffff !important;
@@ -1062,16 +1213,19 @@ footer {
 
   .scroll-indicator {
     display: flex !important;
-    bottom: 7.5rem !important; /* shifted up from 4.5rem to sit cleanly above bottom viewport edge */
+    bottom: 7.5rem !important;
+    /* shifted up from 4.5rem to sit cleanly above bottom viewport edge */
   }
 
   .hero {
     position: relative;
     min-height: 100vh;
-    padding: 5rem 1.25rem 2rem; /* shifted as top as possible immediately below the navbar */
+    padding: 5rem 1.25rem 2rem;
+    /* shifted as top as possible immediately below the navbar */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* vertically top-aligned instead of centered to prevent overlapping the skyline towers at the bottom */
+    justify-content: flex-start;
+    /* vertically top-aligned instead of centered to prevent overlapping the skyline towers at the bottom */
     align-items: center;
     overflow: hidden;
   }
@@ -1092,9 +1246,11 @@ footer {
 
 
   .hero-greeting {
-    font-size: 0.95rem; /* slightly larger greeting */
+    font-size: 0.8rem;
+    /* scaled down for better fit on tablet/mobile screens */
     font-weight: 700;
-    margin-bottom: 0.25rem; /* ultra-packed */
+    margin-bottom: 0.25rem;
+    /* ultra-packed */
     letter-spacing: 0.25em;
     color: var(--text-secondary);
     text-transform: uppercase;
@@ -1102,24 +1258,30 @@ footer {
   }
 
   .hero-name {
-    font-size: 4.4rem; /* enlarged further for supreme mobile bold presence */
+    font-size: clamp(3.8rem, 9vw, 4.8rem);
+    /* increased size on tablets */
     font-weight: 900;
     line-height: 1.15;
     padding-bottom: 0.1em;
-    margin-bottom: 0.45rem; /* ultra-packed */
-    background: linear-gradient(180deg, #ffffff 30%, #a0a0a0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    margin-bottom: 0.45rem;
+    /* ultra-packed */
+    color: var(--text);
+    -webkit-text-fill-color: var(--text);
+    background: none;
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
     letter-spacing: -0.04em;
-    -webkit-text-stroke: 0 !important; /* disable stroke on gradient text */
+    -webkit-text-stroke: 0 !important;
+    /* disabled border/stroke to match desktop look with no weird outline */
   }
 
   .hero-title {
-    font-size: 1.45rem; /* enlarged from 1.32rem for clear readability on mobile viewports */
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    /* scaled down for clear readability on mobile viewports */
     line-height: 1.65;
     color: #d4d4d4;
-    margin-bottom: 0.85rem; /* ultra-packed */
+    margin-bottom: 0.85rem;
+    /* ultra-packed */
   }
 
 
@@ -1173,6 +1335,12 @@ footer {
     margin: 0 auto;
   }
 
+  .blogs-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
   .cert-list {
     grid-template-columns: 1fr;
   }
@@ -1184,32 +1352,42 @@ footer {
 
 @media (max-width: 480px) {
   .hero {
-    padding: 4.5rem 1rem 2rem; /* shifted as top as possible immediately below the navbar */
+    padding: 4.5rem 1rem 2rem;
+    /* shifted as top as possible immediately below the navbar */
   }
 
 
 
   .hero-greeting {
-    margin-bottom: 0.15rem; /* ultra-packed */
-    font-size: 0.85rem;
+    margin-bottom: 0.15rem;
+    /* ultra-packed */
+    font-size: 0.75rem;
+    /* smaller greeting on mobile */
     letter-spacing: 0.2em;
   }
 
   .hero-name {
-    font-size: 3.6rem; /* enlarged further for supreme legibility and presence */
+    font-size: 3.2rem;
+    /* increased for proper fit and prominence */
     font-weight: 900;
     line-height: 1.15;
     padding-bottom: 0.1em;
-    margin-bottom: 0.35rem; /* ultra-packed */
-    background: linear-gradient(180deg, #ffffff 40%, #a0a0a0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    margin-bottom: 0.35rem;
+    /* ultra-packed */
+    color: var(--text);
+    -webkit-text-fill-color: var(--text);
+    background: none;
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-stroke: 0 !important;
+    /* disabled border/stroke to match desktop look with no weird outline */
   }
 
   .hero-title {
-    font-size: 1.25rem; /* enlarged from 1.15rem for reading ease */
-    margin-bottom: 0.75rem; /* ultra-packed */
+    font-size: 1.02rem;
+    /* reduced from 1.25rem for compact elegance */
+    margin-bottom: 0.75rem;
+    /* ultra-packed */
     line-height: 1.6;
     color: #d4d4d4;
   }
