@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
               className={activeSection === section ? 'active' : ''}
               onClick={(e) => handleNavClick(e, section)}
             >
-              {section === 'experience' ? 'Experience & Skills' : section.charAt(0).toUpperCase() + section.slice(1)}
+              {section === 'experience' ? 'Experience' : section.charAt(0).toUpperCase() + section.slice(1)}
             </a>
           ))}
         </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
-  const scrollToSkills = (): void => {
-    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToExperience = (): void => {
+    document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="scroll-indicator" onClick={scrollToSkills}>
+      <div className="scroll-indicator" onClick={scrollToExperience}>
         <div className="mouse">
           <div className="wheel"></div>
         </div>
