@@ -329,6 +329,7 @@ a {
   text-shadow: none;
   /* removed blue glow shadow */
 }
+
 .hero-title {
   font-size: clamp(1.15rem, 2.8vw, 1.45rem);
   color: var(--text-secondary);
