@@ -31,7 +31,7 @@ const Writing: React.FC = () => (
                 </span>
               ))}
               <a
-                className="chip"
+                className="chip chip--read"
                 href={post.url}
                 target="_blank"
                 rel="noopener noreferrer"

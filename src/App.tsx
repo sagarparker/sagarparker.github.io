@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import SkylineImage from './components/SkylineImage';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
@@ -12,7 +13,7 @@ import Dock from './components/Dock';
 
 const App: React.FC = () => (
   <div className="page">
-    <div className="page-glow" aria-hidden="true" />
+    <SkylineImage className="page-backdrop" />
 
     <div className="container">
       <Hero />

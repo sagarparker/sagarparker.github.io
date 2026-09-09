@@ -11,7 +11,15 @@ const JobEntry: React.FC<{ job: Job }> = ({ job }) => {
       <summary>
         <div className="row">
           <span className="row-logo" aria-hidden="true">
-            {job.monogram}
+            {job.logo ? (
+              <img
+                className="row-logo-img"
+                src={job.logo}
+                alt={`${job.company} logo`}
+              />
+            ) : (
+              job.monogram
+            )}
           </span>
           <div className="row-body">
             <div className="row-head">

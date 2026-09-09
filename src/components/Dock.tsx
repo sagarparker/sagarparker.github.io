@@ -23,11 +23,11 @@ const NAV = [
 ];
 
 const readTheme = (): Theme =>
-  (document.documentElement.getAttribute('data-theme') as Theme) || 'dark';
+  (document.documentElement.getAttribute('data-theme') as Theme) || 'light';
 
 const Dock: React.FC = () => {
   const [active, setActive] = useState<string>('hero');
-  const [theme, setTheme] = useState<Theme>('dark');
+  const [theme, setTheme] = useState<Theme>('light');
 
   useEffect(() => {
     setTheme(readTheme());
@@ -39,7 +39,7 @@ const Dock: React.FC = () => {
     try {
       window.localStorage.setItem('theme', next);
     } catch {
-      /* storage unavailable — theme just won't persist */
+      /* storage unavailable - theme just won't persist */
     }
     setTheme(next);
   }, []);

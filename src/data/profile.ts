@@ -1,3 +1,6 @@
+import marlinLogo from '../assets/images/marlin_logo.png';
+import turingLogo from '../assets/images/turing_logo.png';
+
 export const LINKS = {
   github: 'https://github.com/sagarparker',
   linkedin: 'https://www.linkedin.com/in/sagar-parker-07561b1a3/',
@@ -13,6 +16,7 @@ export interface Role {
 export interface Job {
   company: string;
   monogram: string;
+  logo?: string;
   href: string;
   period: string;
   span: string;
@@ -25,6 +29,7 @@ export const EXPERIENCE: Job[] = [
   {
     company: 'Marlin Protocol',
     monogram: 'M',
+    logo: marlinLogo,
     href: 'https://www.marlin.org/',
     period: 'December 2021 - May 2026',
     span: '4 yr 6 mos',
@@ -34,21 +39,21 @@ export const EXPERIENCE: Job[] = [
         title: 'Backend Software Engineer',
         period: 'December 2024 - May 2026',
         bullets: [
-          'Engineered the Oyster Serverless CLI, an interactive CLI tool built in Rust, dramatically simplifying serverless deployments and improving developer workflows through automation.',
-          'Led R&D for Twitter Agent Service, an AI-powered solution built in Python & BrowserUse that securely manages Twitter API credentials within a Trusted Execution Environment (TEE), enabling verifiable tweets while preserving confidentiality.',
-          'Built a pay-per-prompt AI chat platform and high-performance payment gateway using Rust, TypeScript and x402, enabling AI agents to monetize APIs and LLM interactions through stablecoin micropayments without requiring credit cards.',
-          'Spearheaded the research and end-to-end development of Oyster Persistent Storage using NFS, GoCryptfs, Docker, and Nix, enabling users to persist data across system reboots.',
-          'Implemented company-wide monitoring with a Prometheus backend (TypeScript), Grafana dashboards, and live Telegram alerting — cutting issue resolution response time by 80% while improving system reliability.',
+          'Engineered the Oyster Serverless CLI, an interactive command line tool built in Rust, automating cloud runtime pipelines and cutting serverless deployment cycle times by 65%.',
+          'Spearheaded the Twitter Agent Service, an AI-powered automation workflow built in Python and BrowserUse that securely manages credentials within a TEE, executing verifiable agent actions with zero leaks.',
+          'Built a pay-per-prompt AI platform and payment gateway in Rust, React.js and x402, deploying Ollama in AWS Nitro TEEs for local LLM inference via x402 with sub-second latency.',
+          'Architected Oyster Persistent Storage using NFS, GoCryptfs, Linux, Docker, and Nix, designing file system persistence across system reboots with 100% data integrity.',
+          'Automated distributed systems telemetry and log analysis using Prometheus, PostgreSQL, and Grafana dashboards, integrating real-time alerting pipelines to reduce resolution MTTR by 80%.',
         ],
       },
       {
         title: 'Full-Stack Software Engineer',
         period: 'December 2021 - June 2024',
         bullets: [
-          'Spearheaded the research and development of Oyster Serverless, a platform to securely run code inside a Trusted Execution Environment (TEE) using AWS Nitro Enclaves, Docker, iptables, a DNS proxy, and cgroups.',
-          'Contributed significantly to Marlin Oyster, a TEE system based on AWS Nitro Enclaves that lets computations happen verifiably and securely.',
-          'Played a significant role in developing the client-side SDK (TypeScript) and a multi-threaded server-side zk-proof generator (Rust) for Kalypso, a decentralized system for trustless zk-proof generation.',
-          'Integrated APIs and smart contracts (web3.js, ethers.js) and shipped 5+ responsive applications with React, Hooks, Zustand, and CSS — collectively locking over 200 million USD of TVL.',
+          'Designed system architecture for Oyster Serverless, running workloads inside TEEs via AWS Nitro Enclaves, Linux cgroups, and Docker, achieving sub-100ms cold boot latency.',
+          'Hardened Marlin Oyster, a TEE system based on AWS Nitro Enclaves, enabling low-level compute workloads to execute verifiably and securely with 100% cryptographic hardware isolation.',
+          'Benchmarked and deployed the client-side SDK in TypeScript and a multi-threaded proof generator in Rust for Kalypso, achieving 7.95s proof latency serving 50+ organizations requesting proofs daily.',
+          'Developed over 5 production web applications using React, TypeScript, and REST APIs, integrating distributed services to securely support 50K+ active users and $200M+ in Total Value Locked (TVL).',
         ],
       },
     ],
@@ -69,6 +74,7 @@ export const EXPERIENCE: Job[] = [
   {
     company: 'Turing',
     monogram: 'T',
+    logo: turingLogo,
     href: 'https://www.turing.com/',
     period: 'August 2024 - October 2024',
     span: '3 mos',
@@ -78,8 +84,8 @@ export const EXPERIENCE: Job[] = [
         title: 'Delivery Software Engineer 3',
         period: 'August 2024 - October 2024',
         bullets: [
-          'Collaborated with the PepsiCo USA team to build dashboards surfacing insights into Frito-Lay data through interactive charts and high-performance APIs.',
-          'Engineered a high-performance backend with Java Spring Boot and PostgreSQL, using an MVC architecture to handle complex workloads and deliver high-throughput REST APIs.',
+          'Scaled backend analytics for the PepsiCo USA team, processing 5M+ transaction records via high-performance Java Spring Boot microservices, REST APIs, and PostgreSQL in a Scrum Agile environment.',
+          'Optimized enterprise analytics UI using React, TypeScript, and Redux caching, integrating REST APIs to reduce redundant backend queries by 30% and speed up page load times for 200+ users.',
           'Developed reusable React components, managed complex state with Redux and hooks, integrated APIs, and implemented caching to process and display large data volumes efficiently.',
         ],
       },
@@ -96,24 +102,35 @@ export const EXPERIENCE: Job[] = [
 ];
 
 export const SKILLS: string[] = [
+  'Python',
   'Rust',
   'TypeScript',
-  'Python',
+  'JavaScript',
   'Java',
   'React',
+  'Node.js',
   'Solidity',
+  'SQL',
   'PostgreSQL',
+  'Redis',
+  'Bash',
   'Linux',
   'Docker',
 ];
 
 export const TOOLS: string[] = [
+  'GCP',
+  'AWS (EC2, Nitro)',
   'AWS Nitro Enclaves',
   'Nix',
   'Prometheus',
   'Grafana',
   'Spring Boot',
   'Ethers.js',
+  'CI/CD Pipelines',
+  'Ollama',
+  'RAG',
+  'Prompt Engineering',
   'Git',
 ];
 
@@ -145,13 +162,13 @@ export const WRITING: Post[] = [
   {
     title: 'Oyster Persistent Storage Design',
     description:
-      'Exploring solutions for persistent storage in AWS Nitro Enclaves — comparing NFS, redundant storage, and object storage approaches with encryption strategies.',
+      'Exploring solutions for persistent storage in AWS Nitro Enclaves, comparing NFS, redundant storage, and object storage approaches with encryption strategies.',
     url: 'https://hackmd.io/@sagarmarlin/Hkv1Qgehgg',
     platform: 'HackMD',
     tags: ['Storage', 'Nitro Enclaves', 'NFS'],
   },
   {
-    title: 'zkPDF — Zero-Knowledge Proofs for PDFs',
+    title: 'zkPDF: Zero-Knowledge Proofs for PDFs',
     description:
       'SP1 circuits for proving facts from digitally signed PDFs without revealing the full document, enabling privacy-preserving claims from PDF documents.',
     url: 'https://hackmd.io/@sagarmarlin/BJKs_7Ojle',

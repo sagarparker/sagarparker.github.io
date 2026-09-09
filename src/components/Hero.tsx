@@ -2,6 +2,7 @@ import React from 'react';
 import Fade from './Fade';
 import { GitHub, LeetCode, LinkedIn } from './Icons';
 import { LINKS } from '../data/profile';
+import profilePic from '../assets/images/profile_pic.jpeg';
 
 const Hero: React.FC = () => (
   <header className="hero" id="hero">
@@ -46,10 +47,13 @@ const Hero: React.FC = () => (
       </Fade>
 
       <Fade className="hero-avatar-wrap">
-        <div className="hero-avatar" aria-hidden="true">
-          SP
+        <div className="hero-avatar-frame">
+          <img
+            className="hero-avatar"
+            src={profilePic}
+            alt="Sagar Parker"
+          />
         </div>
-        <span className="sr-only">Sagar Parker</span>
       </Fade>
     </div>
   </header>

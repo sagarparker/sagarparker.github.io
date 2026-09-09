@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/logo192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#131313" />
+    <meta name="theme-color" content="#ffffff" />
     <meta
       name="description"
-      content="Sagar Parker — Software Engineer working on distributed systems, confidential computing, and the infrastructure behind modern AI applications."
+      content="Sagar Parker, Software Engineer working on distributed systems, confidential computing, and the infrastructure behind modern AI applications."
     />
     <meta property="og:title" content="Sagar Parker" />
     <meta
@@ -24,9 +24,10 @@
       rel="stylesheet"
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Sagar Parker — Software Engineer</title>
+    <title>Sagar Parker</title>
     <script>
       // Apply the stored theme before first paint so there is no flash.
+      // Default is light; only dark when explicitly stored or OS prefers dark.
       (function () {
         try {
           var stored = localStorage.getItem('theme');
@@ -34,8 +35,10 @@
             document.documentElement.setAttribute('data-theme', stored);
           } else if (
             window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: light)').matches
+            window.matchMedia('(prefers-color-scheme: dark)').matches
           ) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
             document.documentElement.setAttribute('data-theme', 'light');
           }
         } catch (e) {

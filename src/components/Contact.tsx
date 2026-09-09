@@ -8,7 +8,6 @@ const Contact: React.FC = () => (
     <Fade>
       <div className="contact-card">
         <span className="rule-label contact-badge">Contact</span>
-        <div className="contact-glow" aria-hidden="true" />
 
         <div className="contact-inner">
           <h2 className="contact-title">Get in Touch</h2>

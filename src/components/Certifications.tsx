@@ -32,7 +32,7 @@ const certifications: Certification[] = [
     link: 'https://www.udemy.com/certificate/UC-JUILC0PG/',
   },
   {
-    title: 'Flutter & Dart — The Complete Guide',
+    title: 'Flutter & Dart: The Complete Guide',
     provider: 'Udemy',
     link: 'https://www.udemy.com/certificate/UC-a39a7924-0c41-49d7-8ab3-ce90d3f8c5c8/',
   },
