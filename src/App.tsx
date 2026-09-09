@@ -1,41 +1,36 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import Experience from './components/Experience';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Blogs from './components/Blogs';
+import Writing from './components/Writing';
 import Certifications from './components/Certifications';
-import Footer from './components/Footer';
+import Contact from './components/Contact';
+import Dock from './components/Dock';
 
-const App: React.FC = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
-    );
+const App: React.FC = () => (
+  <div className="page">
+    <div className="page-glow" aria-hidden="true" />
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div className="App">
-      <Navbar />
+    <div className="container">
       <Hero />
-      <Experience />
-      <Blogs />
-      <Projects />
-      <Certifications />
-      <Footer />
+
+      <main className="sections">
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Writing />
+        <Certifications />
+      </main>
+
+      <Contact />
     </div>
-  );
-};
+
+    <Dock />
+  </div>
+);
 
 export default App;
