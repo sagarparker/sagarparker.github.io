@@ -1,87 +1,128 @@
 import React from 'react';
+import Fade from './Fade';
+import FeatureHeader from './FeatureHeader';
+import { ArrowUpRight, GitHub, Trophy } from './Icons';
 import collectiveImg from '../assets/images/collective.png';
 import trusttagImg from '../assets/images/trusttag.png';
-import x402OllamaImg from '../assets/images/x402_ollama.png';
+import x402ChatImg from '../assets/images/x402_chat.png';
+import rpythonImg from '../assets/images/r_python.png';
 
 interface Project {
   title: string;
   description: string;
   tech: string[];
   github: string;
-  image: string;
-  achievement?: string;
+  image?: string;
+  award?: string;
 }
 
-interface ProjectCardProps {
-  project: Project;
-}
+const projects: Project[] = [
+  {
+    title: 'Collective',
+    description:
+      'An equity crowdfunding mobile app built with Flutter and governed by smart contracts on Ethereum, featuring a platform-exclusive ERC-20 token (CTV) for investing in campaigns in exchange for equity.',
+    tech: ['Flutter', 'Node.js', 'Solidity', 'Ethereum', 'Truffle'],
+    github: 'https://github.com/sagarparker/Collective',
+    image: collectiveImg,
+    award: 'Winner: Polygon India BUILD IT Hackathon (₹40,000)',
+  },
+  {
+    title: 'rpython',
+    description:
+      'A Python interpreter written in Rust, featuring an AST parser, a two-pass bytecode compiler, and a stack-based virtual machine that supports dynamic control flow, nested functions, and isolated lexical scopes.',
+    tech: ['Rust', 'Compilers', 'Bytecode VM', 'AST'],
+    github: 'https://github.com/sagarparker/rpython',
+    image: rpythonImg,
+  },
+  {
+    title: 'x402-ollama',
+    description:
+      'A pay-per-prompt AI chat app that monetizes an Ollama LLM behind the x402 payment protocol. Users connect a wallet and pay micro-amounts in USDC per request; responses are generated and signed inside an Oyster CVM TEE for end-to-end verifiability.',
+    tech: ['Rust', 'React', 'TypeScript', 'x402', 'Ollama', 'TEE'],
+    github: 'https://github.com/marlinprotocol/x402-ollama',
+    image: x402ChatImg,
+  },
+  {
+    title: 'TrustTag',
+    description:
+      'A smart tag system where a mobile app scans QR codes to fetch product history stored on Hedera DLT, using the Hedera Consensus Service for verifiable timestamping and event ordering.',
+    tech: ['Flutter', 'Node.js', 'AWS', 'Hedera Hashgraph'],
+    github: 'https://github.com/sagarparker/TrustTag',
+    image: trusttagImg,
+    award: 'Top 3: Hedera India Hackathon (₹16,000)',
+  },
+];
 
-const Projects: React.FC = () => {
-  const projects: Project[] = [
-    {
-      title: 'Collective',
-      description: 'An equity crowdfunding mobile app using Flutter managed by smart contracts on Ethereum blockchain. Features a platform-exclusive ERC20 token (CTV) for investing in campaigns in exchange for equity.',
-      tech: ['Flutter', 'Node.js', 'Solidity', 'AWS', 'Ethereum', 'Truffle'],
-      github: 'https://github.com/sagarparker/Collective',
-      image: collectiveImg,
-      achievement: '🏆 Polygon India BUILD IT Hackathon (₹40,000)'
-    },
-    {
-      title: 'x402-ollama',
-      description: 'A pay-per-prompt AI chat application that monetizes an Ollama LLM behind the x402 payment protocol. Users connect a wallet, pay micro-amounts in USDC per request, and chat with the model. Responses are generated and signed inside an Oyster CVM TEE for end-to-end verifiability.',
-      tech: ['Rust', 'React', 'TypeScript', 'x402', 'Ollama', 'Trusted Execution Environment'],
-      github: 'https://github.com/marlinprotocol/x402-ollama',
-      image: x402OllamaImg
-    },
-    {
-      title: 'TrustTag',
-      description: 'A smart tag system using a mobile app to scan QR codes and fetch product history stored on Hedera DLT. Integrated Hedera Consensus Service (HCS) for verifiable timestamping and ordering of events.',
-      tech: ['Flutter', 'Node.js', 'AWS', 'Hedera Hashgraph'],
-      github: 'https://github.com/sagarparker/TrustTag',
-      image: trusttagImg,
-      achievement: '🥉 Top 3 - Hedera India Hackathon (₹16,000)'
-    }
-  ];
-
-  const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
-    <div className="project-card reveal-child">
-      <div className="project-image">
-        <img src={project.image} alt={project.title} />
-      </div>
-      <div className="project-info">
-        <h3 className="project-title">{project.title}</h3>
-        {project.achievement && (
-          <span className="project-achievement">{project.achievement}</span>
-        )}
-        <p className="project-description">{project.description}</p>
-        <div className="project-tech">
-          {project.tech.map((tech, index) => (
-            <span key={index} className="tech-tag">{tech}</span>
-          ))}
+const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
+  <article className="project-card">
+    {project.image && (
+      <div className="project-media">
+        <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
+        <div className="project-media-actions">
+          <a
+            className="chip"
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHub />
+            Source
+          </a>
         </div>
-        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-github-btn">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-          </svg>
-          View on GitHub
+      </div>
+    )}
+
+    <div className="project-body">
+      <div className="project-head">
+        <div>
+          <h3 className="project-title">{project.title}</h3>
+        </div>
+        <a
+          className="icon-link"
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${project.title} on GitHub`}
+        >
+          <ArrowUpRight />
         </a>
       </div>
-    </div>
-  );
 
-  return (
-    <section id="projects" className="reveal">
-      <div className="section-header">
-        <h2 className="section-title">Projects</h2>
-        <div className="section-line"></div>
-      </div>
-      <div className="projects-grid">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+      {project.award && (
+        <span className="project-award">
+          <Trophy style={{ width: '0.875rem', height: '0.875rem' }} />
+          {project.award}
+        </span>
+      )}
+
+      <p className="project-desc">{project.description}</p>
+
+      <div className="tag-grid">
+        {project.tech.map((tech) => (
+          <span key={tech} className="tag">
+            {tech}
+          </span>
         ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </article>
+);
+
+const Projects: React.FC = () => (
+  <section id="projects" className="section section--roomy">
+    <FeatureHeader
+      label="My Projects"
+      title="Check out my latest work"
+      lede="A mix of shipped infrastructure and hackathon builds, mostly around verifiable compute, payments, and blockchain systems."
+    />
+    <div className="project-grid">
+      {projects.map((project, i) => (
+        <Fade key={project.title} delay={0.04 + i * 0.05}>
+          <ProjectCard project={project} />
+        </Fade>
+      ))}
+    </div>
+  </section>
+);
 
 export default Projects;
