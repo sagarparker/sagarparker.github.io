@@ -1,5 +1,4 @@
 import marlinLogo from '../assets/images/marlin_logo.png';
-import turingLogo from '../assets/images/turing_logo.png';
 
 export const LINKS = {
   github: 'https://github.com/sagarparker',
@@ -33,27 +32,26 @@ export const EXPERIENCE: Job[] = [
     href: 'https://www.marlin.org/',
     period: 'December 2021 - May 2026',
     span: '4 yr 6 mos',
-    headline: 'Backend & Full-Stack Software Engineer',
+    headline: 'Software Engineer',
     roles: [
       {
-        title: 'Backend Software Engineer',
-        period: 'December 2024 - May 2026',
+        title: 'Software Engineer',
+        period: 'March 2022 - May 2026',
         bullets: [
-          'Engineered the Oyster Serverless CLI, an interactive command line tool built in Rust, automating cloud runtime pipelines and cutting serverless deployment cycle times by 65%.',
-          'Spearheaded the Twitter Agent Service, an AI-powered automation workflow built in Python and BrowserUse that securely manages credentials within a TEE, executing verifiable agent actions with zero leaks.',
-          'Built a pay-per-prompt AI platform and payment gateway in Rust, React.js and x402, deploying Ollama in AWS Nitro TEEs for local LLM inference via x402 with sub-second latency.',
-          'Architected Oyster Persistent Storage using NFS, GoCryptfs, Linux, Docker, and Nix, designing file system persistence across system reboots with 100% data integrity.',
-          'Automated distributed systems telemetry and log analysis using Prometheus, PostgreSQL, and Grafana dashboards, integrating real-time alerting pipelines to reduce resolution MTTR by 80%.',
+          'Engineered the Oyster Serverless CLI in Rust, enabling developers to test code locally and deploy to the Oyster Serverless platform built on AWS Nitro Enclaves and the workerd runtime, cutting deployment cycles by 65%.',
+          'Led R&D for the Twitter Agent Service, an AI agent built with Python and BrowserUse to automate browser workflows inside AWS Nitro TEEs, managing API keys to post verifiable tweets with zero credential leaks.',
+          'Architected Oyster Persistent Storage using NFS, GoCryptfs, Linux, Docker, and Nix, enabling robust data persistence across system reboots with 100% state integrity.',
+          'Spearheaded R&D for Oyster Serverless, deploying the Cloudflare workerd runtime inside AWS Nitro Enclaves via Docker and cgroups to execute JS and Wasm code with sub-100ms cold boot latency.',
+          'Engineered the client SDK in TypeScript and multi-threaded zk-proof generator in Rust for Kalypso, achieving 7.95s proof latency across 50+ organizations requesting proofs daily.',
         ],
       },
       {
-        title: 'Full-Stack Software Engineer',
-        period: 'December 2021 - June 2024',
+        title: 'Software Engineering Intern',
+        period: 'December 2021 - March 2022',
         bullets: [
-          'Designed system architecture for Oyster Serverless, running workloads inside TEEs via AWS Nitro Enclaves, Linux cgroups, and Docker, achieving sub-100ms cold boot latency.',
-          'Hardened Marlin Oyster, a TEE system based on AWS Nitro Enclaves, enabling low-level compute workloads to execute verifiably and securely with 100% cryptographic hardware isolation.',
-          'Benchmarked and deployed the client-side SDK in TypeScript and a multi-threaded proof generator in Rust for Kalypso, achieving 7.95s proof latency serving 50+ organizations requesting proofs daily.',
-          'Developed over 5 production web applications using React, TypeScript, and REST APIs, integrating distributed services to securely support 50K+ active users and $200M+ in Total Value Locked (TVL).',
+          'Built 5+ frontend web applications using React and TypeScript, integrating APIs and smart contracts to enable the protocol to gain over $200M in Total Value Locked (TVL).',
+          'Played a key role in building Marlin Oyster, a TEE system based on AWS Nitro Enclaves, enabling isolated backend workloads to execute verifiably and securely with 100% attestation integrity.',
+          'Implemented distributed telemetry and monitoring pipelines across backend services using Prometheus, PostgreSQL, and Grafana, tracking system health to reduce incident MTTR by 80%.',
         ],
       },
     ],
@@ -64,39 +62,13 @@ export const EXPERIENCE: Job[] = [
       'React',
       'AWS Nitro Enclaves',
       'Docker',
+      'Nix',
+      'workerd',
       'Solidity',
       'Prometheus',
       'Grafana',
       'TEE',
       'ZK',
-    ],
-  },
-  {
-    company: 'Turing',
-    monogram: 'T',
-    logo: turingLogo,
-    href: 'https://www.turing.com/',
-    period: 'August 2024 - October 2024',
-    span: '3 mos',
-    headline: 'Delivery Software Engineer 3',
-    roles: [
-      {
-        title: 'Delivery Software Engineer 3',
-        period: 'August 2024 - October 2024',
-        bullets: [
-          'Scaled backend analytics for the PepsiCo USA team, processing 5M+ transaction records via high-performance Java Spring Boot microservices, REST APIs, and PostgreSQL in a Scrum Agile environment.',
-          'Optimized enterprise analytics UI using React, TypeScript, and Redux caching, integrating REST APIs to reduce redundant backend queries by 30% and speed up page load times for 200+ users.',
-          'Developed reusable React components, managed complex state with Redux and hooks, integrated APIs, and implemented caching to process and display large data volumes efficiently.',
-        ],
-      },
-    ],
-    skills: [
-      'Java',
-      'Spring Boot',
-      'PostgreSQL',
-      'React',
-      'Redux',
-      'TypeScript',
     ],
   },
 ];

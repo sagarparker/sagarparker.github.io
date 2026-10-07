@@ -20,15 +20,7 @@ const About: React.FC = () => (
         </a>{' '}
         building Oyster, a Trusted Execution Environment platform on AWS Nitro
         Enclaves, along with its serverless runtime, persistent storage layer,
-        and the Kalypso zk-proof network. In between I worked with{' '}
-        <a
-          href="https://www.turing.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Turing
-        </a>{' '}
-        on data platforms for PepsiCo. I hold a Master's in Computer Science from
+        and the Kalypso zk-proof network. I hold a Master's in Computer Science from
         the University of Mumbai and am pursuing a Master's in Computer Software
         Engineering at San Jose State University. I write mostly Python, Rust,
         and TypeScript, and I like problems where verifiability, performance, and
